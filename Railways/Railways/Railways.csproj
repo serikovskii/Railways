@@ -52,6 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LibraryContext.cs" />
+    <Compile Include="Migrations\201904150615597_InitNew.cs" />
+    <Compile Include="Migrations\201904150615597_InitNew.Designer.cs">
+      <DependentUpon>201904150615597_InitNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +69,11 @@
       <Project>{709ED337-094E-4282-A0C4-FCAD5A74E29D}</Project>
       <Name>RailwaysModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904150615597_InitNew.resx">
+      <DependentUpon>201904150615597_InitNew.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

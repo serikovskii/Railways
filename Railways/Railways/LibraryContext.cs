@@ -17,9 +17,9 @@
             : base("name=LibraryContext")
         {
         }
-        DbSet<User> Users { get; set; }
-        DbSet<Train> Trains { get; set; }
-        DbSet<Ticket> Tickets { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Train> Trains { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
 
         // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
         // о настройке и использовании модели Code First см. в статье http://go.microsoft.com/fwlink/?LinkId=390109.
