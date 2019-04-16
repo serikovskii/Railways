@@ -8,8 +8,8 @@ namespace RailwaysModels
 {
     public class User : Entity
     {
-        public string Name { get; set; }
+        public string FullName { get; set; }
         public string Inn { get; set; }
-        public Guid TicketId { get; set; }
+        public string NumberPhone { get; set; }
     }
 }

@@ -9,8 +9,11 @@ namespace RailwaysModels
     public class Train : Entity
     {
         public string Name { get; set; }
-        public string Path { get; set; }
-        public DateTime Date { get; set; }
+        public string Arrival { get; set; }
+        public string Departure { get; set; }
+        public virtual ICollection<DateTime> DateArrival { get; set; }
+        public virtual ICollection<DateTime> DateDeparture { get; set; }
         public int Capacity { get; set; }
+        public int Price { get; set; }
     }
 }

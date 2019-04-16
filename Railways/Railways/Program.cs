@@ -11,29 +11,89 @@ namespace Railways
     {
         static void Main(string[] args)
         {
-            var train = new Train
+            var count = 2;
+            var trains = new List<Train>
             {
-                Name = "Baiterek" , Capacity = 90, Date = DateTime.Now, Path = "Astana - Almamty"
+                new Train
+                {
+                    Name = "Talgo77", Arrival = "Astana", Departure = "Almaty", Capacity = 100, Price = 12000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 17, 50, 00), new DateTime(2019, 04, 20, 09, 40, 00) }, 
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 08, 40, 00), new DateTime(2019, 04, 21, 22, 30, 00) } 
+                },
+                new Train
+                {
+                    Name = "Talgo77", Arrival = "Almaty", Departure = "Astana", Capacity = 100, Price = 12000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 17, 50, 00), new DateTime(2019, 04, 20, 09, 40, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 08, 40, 00), new DateTime(2019, 04, 21, 22, 30, 00) }
+                },
+                new Train
+                {
+                    Name = "Talgo99", Arrival = "Astana", Departure = "Petropavl", Capacity = 90, Price = 9000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 19, 20, 00), new DateTime(2019, 04, 20, 06, 15, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 12, 40, 00), new DateTime(2019, 04, 21, 23, 30, 00) }
+                },
+                new Train
+                {
+                    Name = "Talgo99", Arrival = "Petropavl", Departure = "Astana", Capacity = 90, Price = 9000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 19, 20, 00), new DateTime(2019, 04, 20, 06, 15, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 12, 40, 00), new DateTime(2019, 04, 21, 23, 30, 00) }
+                },
+                new Train
+                {
+                    Name = "Talgo55", Arrival = "Astana", Departure = "Semey", Capacity = 120, Price = 11000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 16, 50, 00), new DateTime(2019, 04, 20, 07, 40, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 05, 40, 00), new DateTime(2019, 04, 21, 21, 30, 00) }
+                },
+                new Train
+                {
+                    Name = "Talgo55", Arrival = "Semey", Departure = "Astana", Capacity = 120, Price = 11000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 16, 50, 00), new DateTime(2019, 04, 20, 07, 40, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 05, 40, 00), new DateTime(2019, 04, 21, 21, 30, 00) }
+                },
+                new Train
+                {
+                    Name = "Talgo33", Arrival = "Astana", Departure = "Ural", Capacity = 80, Price = 7000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 22, 20, 00), new DateTime(2019, 04, 20, 11, 15, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 09, 40, 00), new DateTime(2019, 04, 21, 22, 30, 00) }
+                },
+                new Train
+                { 
+                    Name = "Talgo33", Arrival = "Ural", Departure = "Astana", Capacity = 80, Price = 7000,
+                    DateArrival = new List<DateTime> { new DateTime(2019, 04, 20, 22, 20, 00), new DateTime(2019, 04, 20, 11, 15, 00) },
+                    DateDeparture = new List<DateTime> { new DateTime(2019, 04, 21, 09, 40, 00), new DateTime(2019, 04, 21, 22, 30, 00) }
+                }
             };
-            var ticket = new Ticket
+            var users = new List<User>
             {
-                TrainId = train.Id, Arrival = "Astana", Departure = "Almaty", Price = 4900, DateAndTime = DateTime.Now
+                new User
+                {
+                    FullName = "Azat", Inn = "999333999333", NumberPhone = "+77019997788"
+                },
+                new User
+                {
+                    FullName = "Askar", Inn = "999333999777", NumberPhone = "+77002226655"
+                }
             };
-            var user = new User
-            {
-                Name = "Azat", Inn = "999333666777", TicketId = ticket.Id
-            };
-
             using (var context = new LibraryContext())
             {
-                context.Users.Add(user);
-                context.Trains.Add(train);
-                context.Tickets.Add(ticket);
+                context.Users.AddRange(users);
+                context.Trains.AddRange(trains);
                 context.SaveChanges();
             }
             using (var context = new LibraryContext())
             {
                 
+                var ticketForUser = trains.Where(train => train.Arrival.Contains("Astana")).Where(train => train.Departure.Contains("Almaty")).FirstOrDefault();
+                
+                var ticket = new Ticket
+                {
+                    TrainId = ticketForUser.Id,
+                    UserId = users.ToList()[1].Id,
+                    Count = count,
+                    TotalPrice = ticketForUser.Price * count
+                };
+                context.Tickets.Add(ticket);
+                context.SaveChanges();
             }
 
 

@@ -11,3 +11,16 @@ C:\Users\МукушевА.CORP\source\repos\Railways\RailwaysModels\obj\Debug\Ra
 C:\Users\МукушевА.CORP\source\repos\Railways\RailwaysModels\obj\Debug\RailwaysModels.csproj.CopyComplete
 C:\Users\МукушевА.CORP\source\repos\Railways\RailwaysModels\obj\Debug\RailwaysModels.dll
 C:\Users\МукушевА.CORP\source\repos\Railways\RailwaysModels\obj\Debug\RailwaysModels.pdb
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\RailwaysModels.dll.config
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\RailwaysModels.dll
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\RailwaysModels.pdb
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\EntityFramework.dll
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\EntityFramework.xml
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\obj\Debug\RailwaysModels.csprojAssemblyReference.cache
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\obj\Debug\RailwaysModels.csproj.CoreCompileInputs.cache
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\obj\Debug\RailwaysModels.csproj.CopyComplete
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\obj\Debug\RailwaysModels.dll
+C:\Users\МукушевА.CORP\Documents\GitHub\Railways\Railways\RailwaysModels\obj\Debug\RailwaysModels.pdb
