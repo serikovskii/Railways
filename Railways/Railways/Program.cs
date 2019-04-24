@@ -78,13 +78,9 @@ namespace Railways
             {
                 context.Users.AddRange(users);
                 context.Trains.AddRange(trains);
-                context.SaveChanges();
-            }
-            using (var context = new LibraryContext())
-            {
-                
+
                 var ticketForUser = trains.Where(train => train.Arrival.Contains("Astana")).Where(train => train.Departure.Contains("Almaty")).FirstOrDefault();
-                
+
                 var ticket = new Ticket
                 {
                     TrainId = ticketForUser.Id,
@@ -93,8 +89,10 @@ namespace Railways
                     TotalPrice = ticketForUser.Price * count
                 };
                 context.Tickets.Add(ticket);
+
                 context.SaveChanges();
             }
+            
 
 
         }
