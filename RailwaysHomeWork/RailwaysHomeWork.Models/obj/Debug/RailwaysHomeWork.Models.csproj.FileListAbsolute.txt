@@ -1,0 +1,5 @@
+C:\Users\azat\source\repos\RailwaysHomeWork\RailwaysHomeWork.Models\bin\Debug\RailwaysHomeWork.Models.dll
+C:\Users\azat\source\repos\RailwaysHomeWork\RailwaysHomeWork.Models\bin\Debug\RailwaysHomeWork.Models.pdb
+C:\Users\azat\source\repos\RailwaysHomeWork\RailwaysHomeWork.Models\obj\Debug\RailwaysHomeWork.Models.csproj.CoreCompileInputs.cache
+C:\Users\azat\source\repos\RailwaysHomeWork\RailwaysHomeWork.Models\obj\Debug\RailwaysHomeWork.Models.dll
+C:\Users\azat\source\repos\RailwaysHomeWork\RailwaysHomeWork.Models\obj\Debug\RailwaysHomeWork.Models.pdb
